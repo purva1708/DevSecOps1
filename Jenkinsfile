@@ -12,7 +12,7 @@ pipeline {
     }
         stage ('Check Secrets') {
        steps {
-       sh 'trufflehog3 https://github.com/sweetcbk/DevSecOps.git -f json -o truffelhog_output.json || true'
+       sh 'trufflehog3 https://github.com/purva1708/DevSecOps1.git -f json -o truffelhog_output.json || true'
        }
      }
       stage ('Software Composition Analysis') {
