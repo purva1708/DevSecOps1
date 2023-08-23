@@ -39,8 +39,8 @@ stage ('Static Analysis') {
       stage ('Deploy to Server Application') {
             steps {
            sshagent(['server-application']) {
-              sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/project/webgoat-server-v8.2.0-SNAPSHOT.jar ubuntu@54.242.89.216:/WebGoat'
-             sh 'ssh -o  StrictHostKeyChecking=no ubuntu@54.242.89.216 "nohup java -jar webgoat-server-v8.2.0-SNAPSHOT.jar --server.address=0.0.0.0 --server.port=8080 &"'
+              sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/project/webgoat-server-v8.2.0-SNAPSHOT.jar ubuntu@13.127.1.84:/WebGoat'
+             sh 'ssh -o  StrictHostKeyChecking=no ubuntu@13.127.1.84 "nohup java -jar webgoat-server-v8.2.0-SNAPSHOT.jar --server.address=0.0.0.0 --server.port=8080 &"'
     
            }
            }     
